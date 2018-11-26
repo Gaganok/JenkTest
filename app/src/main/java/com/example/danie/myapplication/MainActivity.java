@@ -23,6 +23,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     //ID code
     static final int CODE = 1;
+    EditText et;
 
 
     @Override
@@ -37,16 +38,16 @@ public class MainActivity extends AppCompatActivity {
         et = findViewById(R.id.editText);
 
         //What happens when encrypt button is clicked
-        encrypt.setOnClickListener(new View.OnClickListener(){
+        encrypt.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v){
+            public void onClick(View v) {
                 //Get the text entered into the text field
                 Editable e = et.getText();
                 //Send it to a method
                 startEncryptActivity(e);
-
             }
         });
+    }
 
     private void startEncryptActivity(Editable e){
         //Create an intent to the second activity
